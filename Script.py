@@ -7,13 +7,13 @@ class script(object):
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴 : 𝙼𝙾𝙽𝙶𝙾-𝙳𝙱
 ✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁 : 𝙰𝙽𝚈𝚆𝙷𝙴𝚁𝙴
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: 𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁-𝙱𝙾𝚃 𝚟3.0.0"""
+✯ 𝙱𝚄𝙸𝙻𝙳 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: 𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁 𝚟3.0.0"""
 
     SOURCE_TXT = """<b>NOTE:</b>
-- 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁 👉 :<a href=https://github.com/kumgit/PROF-AF>𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑-𝐁𝐎𝐓</a>
+- 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁 👉 :<a href=https://t.me/stramgerrr>𝐏𝐑𝐎𝐅𝐄𝐒𝐒𝐎𝐑-𝐁𝐎𝐓</a>
 
 <b>DEVS:</b>
-- Master<a href=https://t.me/sstrangerrr>ρяσƒєѕѕσя️️</a>"""
+- Master <a href=https://t.me/sstrangerrr>ρяσƒєѕѕσя️️</a>"""
 
     FILE_TXT = """➤ 𝐇𝐞𝐥𝐩: 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫𝐞 𝐌𝐨𝐝𝐮𝐥𝐞../
 
@@ -27,7 +27,7 @@ class script(object):
 
 ⪼ 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 ›
 
-<code>/batch https://t.me/mkn_bots_updates https://t.me/mkn_bots_updates</code>
+<code>/batch https://t.me/ContenTeam https://t.me/ContenTeam</code>
 
 𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/ContenTeam><b>ContenTeam</b></a>"""
     
