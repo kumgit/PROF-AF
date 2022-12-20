@@ -895,7 +895,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin')
             ],[
             InlineKeyboardButton('𝙲𝙰𝚁𝙱𝙾𝙽', callback_data='carb'),
-            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
+            InlineKeyboardButton('𝙵𝙾𝙽𝚃', callback_data='font'),
             InlineKeyboardButton('𝚉𝙾𝙼𝙱𝙸𝙴', callback_data='zombies')
             ],[
             InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats')
@@ -1138,13 +1138,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )      
-    elif query.data == "fond":
+    elif query.data == "font":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.FOND_TXT,
+            text=script.FONT_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )       
