@@ -553,7 +553,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('Unblock the bot man !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -821,7 +821,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
     elif query.data == "pages":
-        await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=True)
+        await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=False)
     elif query.data == "start":                        
         buttons = [[
             InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
