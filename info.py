@@ -57,7 +57,7 @@ G_FILTER = bool(environ.get("G_FILTER", True))
 BUTTON_LOCK = bool(environ.get("BUTTON_LOCK", True))
 
 # Others
-IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "5000"))
+IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "15000"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ContenTeam')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
@@ -94,7 +94,7 @@ LONG_DROPLINK_URL = environ.get('LONG_DROPLINK_URL', False)
 SHORTNER_API = environ.get('SHORTNER_API', '9c42e07cd6894c766115464563abd3f226182a7c')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 5000))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 15000))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
