@@ -58,7 +58,7 @@ async def broadcast_group(bot, message):
     async for group in groups:
         pti, sh, ex = await broadcast_messages_group(int(group['id']), b_msg)
         if pti == True:
-            if sh == "Succes":
+            if sh == "Success":
                 success += 1
         elif pti == False:
             if sh == "deleted":
@@ -74,7 +74,7 @@ async def broadcast_group(bot, message):
 async def broadcast_messages_group(chat_id, message):
     try:
         await message.copy(chat_id=chat_id)
-        return True, "Succes", 'mm'
+        return True, "Success", 'mm'
     except FloodWait as e:
         await asyncio.sleep(e.x)
         return await broadcast_messages_group(chat_id, message)
