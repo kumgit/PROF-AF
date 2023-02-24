@@ -94,8 +94,8 @@ LONG_DROPLINK_URL = environ.get('LONG_DROPLINK_URL', False)
 SHORTNER_API = environ.get('SHORTNER_API', '9c42e07cd6894c766115464563abd3f226182a7c')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 0))
-SELF_DELETE = environ.get('SELF_DELETE', False)
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 5000))
+SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
