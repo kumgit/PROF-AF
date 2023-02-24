@@ -40,5 +40,3 @@ ujson
 wget
 pytz
 shortzy
-imdb
-cinemagoer
