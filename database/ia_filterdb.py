@@ -3,7 +3,6 @@ from struct import pack
 import re
 import base64
 from pyrogram.file_id import FileId
-import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
 from marshmallow.exceptions import ValidationError
 from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, MAX_RIST_BTNS
