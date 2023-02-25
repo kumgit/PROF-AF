@@ -135,7 +135,8 @@ async def pm_next_page(bot, query):
     if not files:
         return
     
-    btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+    btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]
+                                 {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
                 
     if 0 < offset <= 10:
         off_set = 0
@@ -197,7 +198,8 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}",
+                    text=f"[{get_size(file.file_size)}]
+                    {file.file_name}",
                     url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
                 ),
             ]
@@ -821,7 +823,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
     elif query.data == "pages":
-        await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=False)
+        await query.answer("🤨 Curiosity is little more, isn't it? 😁", show_alert=False)
     elif query.data == "start":                        
         buttons = [[
             InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
@@ -1276,7 +1278,8 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}",
+                    text=f"[{get_size(file.file_size)}]
+                    {file.file_name}",
                     url=await get_shortlink(f"https://telegram.me/{temp.U_NAME}?start=pre_{file.file_id}")
                 ),
             ]
@@ -1389,7 +1392,8 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         search, files, offset, total_results = pmspoll
     pre = 'pmfilep' if PROTECT_CONTENT else 'pmfile'
     if SINGLE_BUTTON:
-        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}')] for file in files]
+        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}]
+                                     {file.file_name}", callback_data=f'{pre}#{file.file_id}')] for file in files]
     else:
         btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}',),
               InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}_#{file.file_id}')] for file in files ]             
