@@ -2,7 +2,7 @@ import logging
 import shortzy
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from info import LONG_DROPLINK_URL, SHORTNER_API, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
-from imdb import Cinemagoer
+from imdb import IMDb
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
