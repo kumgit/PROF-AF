@@ -29,11 +29,11 @@
         },
         "SHORT_API": {
             "description": "Api Key Of shortner You Use.",
-            "required": false
+            "required": true
         },
         "SHORT_URL": {
             "description": "Url of shortner site you use.",
-            "required": false
+            "required": true
         },
         "PICS": {
             "description": "Add some telegraph link of pictures .",
@@ -151,14 +151,6 @@
             "required": false
         }
     },
-    "addons": [],
-    "buildpacks": [{
+    "buildpacks":[{
         "url": "heroku/python"
-    }],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
-}
+    }]
