@@ -27,14 +27,6 @@
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
             "required": true
         },
-        "SHORT_API": {
-            "description": "Api Key Of shortner You Use.",
-            "required": true
-        },
-        "SHORT_URL": {
-            "description": "Url of shortner site you use.",
-            "required": true
-        },
         "PICS": {
             "description": "Add some telegraph link of pictures .",
             "required": false
@@ -151,6 +143,14 @@
             "required": false
         }
     },
-    "buildpacks":[{
+    "addons": [],
+    "buildpacks": [{
         "url": "heroku/python"
-    }]
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
