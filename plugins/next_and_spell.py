@@ -32,9 +32,6 @@ async def next_page(bot, query):
     except:
         offset = 0
     search = temp.BUTTONS.get(key)
-    if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
-        return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try:
