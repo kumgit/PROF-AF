@@ -138,15 +138,16 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", 
                     url=await get_shortlink(f"https://t.me/{temp.U_NAME}?start=files_{file.file_id}")
-                ),
+                )
             ]
             for file in files
         ]
 
-    btn.insert(0),
+    btn.insert(0,
         [
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/c/1848392816/6132')
         ]
+              )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
