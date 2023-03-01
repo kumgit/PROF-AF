@@ -6,7 +6,7 @@ from Telethroid import started_telethroid
 from database.ia_filterdb import Media
 from database.users_chats_db import db
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, PORT
-from utils import temp, shortzy
+from utils import temp, shortz
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from datetime import datetime
