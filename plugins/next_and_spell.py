@@ -23,10 +23,9 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
 
+@Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
-    if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -35,7 +34,7 @@ async def next_page(bot, query):
     if not search:
         await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
         return
-    
+
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
     try:
         n_offset = int(n_offset)
@@ -44,8 +43,7 @@ async def next_page(bot, query):
 
     if not files:
         return
-    settings = await get_settings(query.message.chat.id)
-    nxreq  = query.from_user.id if query.from_user else 0
+    
     if settings['button']:
         btn = [
             [
@@ -86,8 +84,7 @@ async def next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📃 Pages {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
-                                  callback_data="pages")]
+             InlineKeyboardButton(f"📃 Pages {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages")]                                  
         )
     elif off_set is None:
         btn.append(
@@ -113,7 +110,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("Don't touch others request.", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = temp.SPELL_CHECK.get(query.message.reply_to_message.id)
