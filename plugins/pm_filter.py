@@ -51,12 +51,29 @@ async def fil_mod(client, message):
       else:
           await m.edit("USE :- /autofilter on 𝙾𝚁 /autofilter off")
 
-@Client.on_message(filters.group & filters.text & filters.incoming)
+@Client.on_message(filters.private & filters.group & filters.text & filters.chat(AUTH_USERS) if AUTH_USERS else filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
         await auto_filter(client, message)
 
+async def pm_AutoFilter(client, msg, pmspoll=False):    
+    if not pmspoll:
+        message = msg   
+        if message.text.startswith("/"): return  # ignore commands
+        if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
+            return
+        if 2 < len(message.text) < 100:
+            search = message.text
+            files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
+            if not files:               
+                return await pm_spoll_choker(msg)              
+        else:
+            return 
+    else:
+        message = msg.message.reply_to_message  # msg will be callback query
+        search, files, offset, total_results = pmspoll
+    pre = 'pmfilep' if PROTECT_CONTENT else 'pmfile'
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
